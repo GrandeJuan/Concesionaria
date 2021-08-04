@@ -1,3 +1,4 @@
+// Enunciado //
 Primera semana de trabajo{
     La concesionaria necesita una lista con todos sus autos;
         let autos =[
@@ -5,3 +6,17 @@ Primera semana de trabajo{
         ] 
 }
     
+// Primer Entrega de Codigo //
+Enunciado --
+Tengo que crear la variable autos que tiene que contener dos objetos literales con los atributos [marca, modelo, precio, km, color, cuotas, anio, patente, vendido]:
+    El primer auto es un Ford Fiesta Azul, del 2019, con 200 kilómetros, cuyo precio es 150000, disponible en 12 cuotas, con la patente APL123 que no está vendido
+    El segundo auto es un Toyota Corolla Blanco, del 2019, 0 kilómetros, cuyo precio es 100000, disponible en 14 cuotas, con la patente JJK116 que no está vendido.
+Por ultimo debo exportar el modulo para poder usarlo mas adelante.
+--
+Respuesta --
+let autos = [
+    {objeto 1},
+    {objeto 2}
+];
+
+module.exports = autos;
