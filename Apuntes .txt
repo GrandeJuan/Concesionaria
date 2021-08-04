@@ -1,0 +1,7 @@
+Primera semana de trabajo{
+    La concesionaria necesita una lista con todos sus autos;
+        let autos =[
+            {marca: ' ', modelo: ' ', color: ' ', año: ' ', km: ' ', precio: ' ', cuotas: ' ', patente: ' ', vendido: ' '},
+        ] 
+}
+    
