@@ -1,11 +1,3 @@
-// Enunciado //
-Primera semana de trabajo{
-    La concesionaria necesita una lista con todos sus autos;
-        let autos =[
-            {marca: ' ', modelo: ' ', color: ' ', año: ' ', km: ' ', precio: ' ', cuotas: ' ', patente: ' ', vendido: ' '},
-        ] 
-}
-    
 // Primer Entrega de Codigo //
 Enunciado --
 Tengo que crear la variable autos que tiene que contener dos objetos literales con los atributos [marca, modelo, precio, km, color, cuotas, anio, patente, vendido]:
@@ -20,3 +12,17 @@ let autos = [
 ];
 
 module.exports = autos;
+--
+// Segunda Entrega de Codigo //
+Enunciado --
+Crear el modulo concesionaria que tendra las funcionalidades que el cliente requiera.
+Crear el objeto literal concesionaria que contendra todas las funcionalidades requeridas.
+Dicho objeto tiene que contener la lista de automoviles importada anteriormente (lista de autos.js).
+--
+Respuesta --
+const autos = require('./lista de autos.js');
+
+const concesionaria = {
+    funcionalidades: ' ',
+    autos: autos
+}
