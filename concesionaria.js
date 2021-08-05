@@ -17,9 +17,17 @@ const concesionaria = {
         if (autoFiltrado) {
             autoFiltrado.vendido = true
         }
+    },
+    autosParaLaVenta: function () {
+        const autosParaVender = this.autos.filter(function (auto) {
+            return auto.vendido == false
+        })
+        return autosParaVender
     }
 };
 
-console.log(autos);
+
+/* console.log(autos);
 concesionaria.venderAuto('APL123');
 console.log(autos);
+console.log(concesionaria.autosParaLaVenta()); */
