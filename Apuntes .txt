@@ -25,4 +25,27 @@ const autos = require('./lista de autos.js');
 const concesionaria = {
     funcionalidades: ' ',
     autos: autos
-}
+};
+--
+// Tercera Entrega de Codigo //
+Enunciado --
+Agregar al objeto literal concesionaria la funcionalidad buscarAuto.
+buscarAuto recibe como parametro la patente y devuelve el auto que corresponda con la misma. En caso de no encontrar el auto retorna null.
+--
+Respuesta --
+const autos = require('./autos.js');
+
+const concesionaria = {
+    autos: autos,
+    buscarAuto: function (patente) {
+        autosFiltrados = this.autos.filter(function (auto) {
+            return auto.patente == patente
+        })
+        if(autosFiltrados.length == 0){
+            return null
+        }else{
+            return autosFiltrados[0]
+        }
+    }
+};
+---
