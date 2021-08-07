@@ -32,33 +32,30 @@ const concesionaria = {
         return autos0Km
     },
     listaDeVentas: function () {
-        const listaDeAutosVendidos = this.autos.filter(function(auto) {
+        const listaDeAutosVendidos = this.autos.filter(function (auto) {
             return auto.vendido == true
         });
-        const listaDePreciosNominal = listaDeAutosVendidos.map(function(auto){
+        const listaDePreciosNominal = listaDeAutosVendidos.map(function (auto) {
             return auto.precio
         });
         return listaDePreciosNominal;
-    }
-}
-
-
-/*     totalDeVentas: function () {
-        const autosVendidos = this.autos.filter(function(auto){
+    },
+    totalDeVentas: function () {
+        const autosVendidos = this.autos.filter(function (auto) {
             return auto.vendido == true
-        })
-        const listaDePreciosAutosVendidos = autosVendidos.reduce(function(acumulador, auto){
-            return acumulador.precio + auto.precio
-        })
+        });
+        const listaDePreciosAutosVendidos = autosVendidos.reduce(function (acumulador, auto) {
+            return acumulador + auto.precio
+        }, 0);
         return listaDePreciosAutosVendidos;
-    } */
-/* }; */
+    }
+};
 
 
 /* console.log(autos);
 concesionaria.venderAuto('APL123');
 console.log(autos);
 console.log(concesionaria.autosParaLaVenta());
-console.log(concesionaria.autosNuevos()); */
-console.log(concesionaria.listaDeVentas());
-/* console.log(concesionaria.totalDeVentas()); */
+console.log(concesionaria.autosNuevos());
+console.log(concesionaria.listaDeVentas()); */
+console.log(concesionaria.totalDeVentas());
