@@ -23,11 +23,19 @@ const concesionaria = {
             return auto.vendido == false
         })
         return autosParaVender
-    }
-};
+    },
+    autosNuevos: function () {
+        const listaDeAutosParaVender = this.autosParaLaVenta();
+        const autos0Km = listaDeAutosParaVender.filter(function (auto) {
+            return auto.km < 100
+        }) 
+        return autos0Km
+        }
+    };
 
 
 /* console.log(autos);
 concesionaria.venderAuto('APL123');
 console.log(autos);
-console.log(concesionaria.autosParaLaVenta()); */
+console.log(concesionaria.autosParaLaVenta());
+console.log(concesionaria.autosNuevos()); */
