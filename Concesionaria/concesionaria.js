@@ -52,14 +52,15 @@ const concesionaria = {
         return listaDePreciosAutosVendidos;
     },
     puedeComprar: function (auto, persona) {
-        let valorDeLaCuota = auto.precio / auto.cuotas;
-        if (auto.precio <= persona.capacidadDePagoTotal && valorDeLaCuota <= persona.capacidadDePagoEnCuotas){
-            return true
-        } else {
-            return false
-        } 
-        }
-    }; 
+        const valorDeLaCuota = auto.precio / auto.cuotas;
+        return auto.precio <= persona.capacidadDePagoTotal && valorDeLaCuota <= persona.capacidadDePagoEnCuotas
+    },
+    autosQuePuedeComprar: function (persona) {
+        const autosQueEstanALaVenta = this.autosParaLaVenta();
+        const listaDeAutosQuePuedeComprar = autosQueEstanALaVenta.filter((auto) => this.puedeComprar(auto, persona));
+        return listaDeAutosQuePuedeComprar;
+    }
+};
 
 
 /* console.log(autos);
@@ -69,4 +70,23 @@ console.log(concesionaria.autosParaLaVenta());
 console.log(concesionaria.autosNuevos());
 console.log(concesionaria.listaDeVentas());
 console.log(concesionaria.totalDeVentas()); */
-console.log(concesionaria.puedeComprar({marca: 'Ford' , modelo: 'Fiesta' , color: 'Azul' , anio: 2019 , km: 200 , precio: 150000 , cuotas: 12 , patente: 'APL123' , vendido: false}, {nombre: 'Juan' , capacidadDePagoEnCuotas: 100000000 , capacidadDePagoTotal: 1000000000}));
+console.log(concesionaria.puedeComprar({
+    marca: 'Ford',
+    modelo: 'Fiesta',
+    color: 'Azul',
+    anio: 2019,
+    km: 200,
+    precio: 150000,
+    cuotas: 12,
+    patente: 'APL123',
+    vendido: false
+}, {
+    nombre: 'Juan',
+    capacidadDePagoEnCuotas: 100000000,
+    capacidadDePagoTotal: 1000000000
+}));
+/* console.log(concesionaria.autosQuePuedeComprar({
+    nombre: 'Juan',
+    capacidadDePagoEnCuotas: 100000000,
+    capacidadDePagoTotal: 1000000000
+})); */
